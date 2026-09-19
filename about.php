@@ -76,7 +76,7 @@
                     <img src="https://doktersehat.com/wp-content/uploads/2019/04/apa-itu-bullying-doktersehat.jpg" alt="Apa Itu Bullying?" class="img-fluid rounded mb-3">
                     <h4 class="mb-3">Apa Itu Bullying?</h4>
                     <p class="mb-4">Bullying adalah tindakan intimidasi atau kekerasan yang dilakukan secara berulang terhadap seseorang...</p>
-                    <a class="btn btn-primary" href="https://doktersehat.com/informasi/kesehatan-umum/bullying/" target="_blank">Read More</a>
+                    <a class="btn btn-primary" href="https://www.halodoc.com/kesehatan/bullying" target="_blank">Read More</a>
                 </div>
             </div>
 

@@ -1,0 +1,6 @@
+Ke depannya, workflow-nya simpel: tiap abis ngoding & udah ditest bagus di localhost, 
+tinggal ulangi 3 baris ini aja (gak perlu remote add lagi, itu cuma sekali di awal):
+
+git add .
+git commit -m "deskripsi perubahan apa"
+git push

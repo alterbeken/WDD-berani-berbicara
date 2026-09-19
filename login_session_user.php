@@ -188,17 +188,17 @@ $user = $result->fetch_assoc();
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <p class="d-inline-block border rounded-pill py-1 px-4">Doctors</p>
-                <h1>List Psikolog</h1>
+                <p class="d-inline-block border rounded-pill py-1 px-4">Psikolog Kami</p>
+                <h1>Daftar Psikolog</h1>
             </div>
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item position-relative rounded overflow-hidden">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/Felix.jpg" alt="">
+                            <img class="img-fluid" src="img/Alter.png" alt="">
                         </div>
                         <div class="team-text bg-light text-center p-4">
-                            <h5>Felix</h5>
+                            <h5>Alter</h5>
                             <p class="text-primary">Psikolog</p>
                             <div class="team-social text-center">
                                 <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
@@ -262,61 +262,105 @@ $user = $result->fetch_assoc();
     <!-- Team End -->
 
 
-     <!-- Appointment Start -->
-     <div class="container-xxl py-5">
-            <div class="container">
-                <div class="row g-5">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <p class="d-inline-block border rounded-pill py-1 px-4">Pelaporan</p>
-                        <h1 class="mb-4">Laporkan jika anda melihat bullying!</h1>
-                        <div class="bg-light rounded d-flex align-items-center p-5 mb-4">
-                            <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
-                                <i class="fa fa-phone-alt text-primary"></i>
+    <!-- Appointment Start -->
+                                <div class="container-xxl py-5">
+                                        <div class="container">
+                                            <div class="row g-5">
+                                                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                                                    <p class="d-inline-block border rounded-pill py-1 px-4">Pelaporan</p>
+                                                    <h1 class="mb-4">Laporkan jika anda melihat bullying!</h1>
+                                                    <div class="bg-light rounded d-flex align-items-center p-5">
+                                                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
+                                                            <i class="fa fa-phone-alt text-primary"></i>
+                                                        </div>
+                                                        <div class="ms-4">
+                                                            <p class="mb-2">Call Us Now</p>
+                                                            <h5 class="mb-0">0812434425344</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="bg-light rounded d-flex align-items-center p-5">
+                                                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
+                                                            <i class="fa fa-envelope-open text-primary"></i>
+                                                        </div>
+                                                        <div class="ms-4">
+                                                            <p class="mb-2">Mail Us Now</p>
+                                                            <h5 class="mb-0">beraniberbicara@gmail.com</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                                                    <div class="bg-light rounded p-5">
+                                                    <ul class="nav nav-pills nav-fill mb-4" id="pill-tab" role="tablist" style="border-radius: 10px; overflow: hidden;">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active w-100 py-3" data-bs-toggle="pill" data-bs-target="#pill-report" type="button">Laporkan Bullying</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link w-100 py-3" data-bs-toggle="pill" data-bs-target="#pill-appointment" type="button">Booking Konsultasi</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane fade show active" id="pill-report">
+                                    <form action="submit_report.php" method="POST">
+                                        <div class="row g-3">
+                                            <div class="col-12 col-sm-6">
+                                                <input type="text" name="name" class="form-control border-0" placeholder="Your Name" style="height: 55px;" required>
+                                            </div>
+                                            <div class="col-12 col-sm-6">
+                                                <input type="email" name="email" class="form-control border-0" placeholder="Your Email" style="height: 55px;" required>
+                                            </div>
+                                            <div class="col-12">
+                                                <input type="tel" name="mobile" class="form-control border-0" placeholder="Your Mobile Number" style="height: 55px;" pattern="[0-9]{10,15}" title="Nomor HP harus 10-15 digit angka" required>
+                                            </div>
+                                            <div class="col-12">
+                                                <textarea name="description" class="form-control border-0" rows="5" placeholder="Ceritakan kejadian yang kamu lihat/alami" required></textarea>
+                                            </div>
+                                            <div class="col-12">
+                                                <button class="btn btn-primary w-100 py-3" type="submit">Submit Report</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="tab-pane fade" id="pill-appointment">
+                                    <form action="submit_appointment.php" method="POST">
+                                        <div class="row g-3">
+                                            <div class="col-12 col-sm-6">
+                                                <input type="text" name="name" class="form-control border-0" placeholder="Your Name" style="height: 55px;" required>
+                                            </div>
+                                            <div class="col-12 col-sm-6">
+                                                <input type="email" name="email" class="form-control border-0" placeholder="Your Email" style="height: 55px;" required>
+                                            </div>
+                                            <div class="col-12 col-sm-6">
+                                                <input type="tel" name="mobile" class="form-control border-0" placeholder="Your Mobile Number" style="height: 55px;" pattern="[0-9]{10,15}" title="Nomor HP harus 10-15 digit angka" required>
+                                            </div>
+                                            <div class="col-12 col-sm-6">
+                                                <select name="doctor_choice" class="form-control border-0" style="height: 55px;" required>
+                                                    <option value="">Pilih Psikolog</option>
+                                                    <option value="Alter">Alter</option>
+                                                    <option value="Benediktus Ezra Pradipta I">Benediktus Ezra Pradipta I</option>
+                                                    <option value="Kevin Rakhmad Fauzan">Kevin Rakhmad Fauzan</option>
+                                                    <option value="Jonathan Sutandi">Jonathan Sutandi</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12 col-sm-6">
+                                                <input type="date" name="appointment_date" class="form-control border-0" style="height: 55px;" required>
+                                            </div>
+                                            <div class="col-12 col-sm-6">
+                                                <input type="time" name="appointment_time" class="form-control border-0" style="height: 55px;" required>
+                                            </div>
+                                            <div class="col-12">
+                                                <button class="btn btn-primary w-100 py-3" type="submit">Book Consultation</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
-                            <div class="ms-4">
-                                <p class="mb-2">Call Us Now</p>
-                                <h5 class="mb-0">0812434425344</h5>
-                            </div>
-                        </div>
-                        <div class="bg-light rounded d-flex align-items-center p-5">
-                            <div class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white" style="width: 55px; height: 55px;">
-                                <i class="fa fa-envelope-open text-primary"></i>
-                            </div>
-                            <div class="ms-4">
-                                <p class="mb-2">Mail Us Now</p>
-                                <h5 class="mb-0">beraniberbicara@gmail.com</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="bg-light rounded h-100 d-flex align-items-center p-5">
-                        <form action="submit_report.php" method="POST">
-    <div class="row g-3">
-        <div class="col-12 col-sm-6">
-            <input type="text" name="name" class="form-control border-0" placeholder="Your Name" style="height: 55px;" required>
-        </div>
-        <div class="col-12 col-sm-6">
-            <input type="email" name="email" class="form-control border-0" placeholder="Your Email" style="height: 55px;" required>
-        </div>
-        <div class="col-12 col-sm-6">
-            <input type="date" name="report_date" class="form-control border-0" style="height: 55px;">
-        </div>
-        <div class="col-12">
-            <textarea name="description" class="form-control border-0" rows="5" placeholder="Describe your problem" required></textarea>
-        </div>
-        <div class="col-12">
-            <button class="btn btn-primary w-100 py-3" type="submit">Submit Report</button>
-        </div>
-    </div>
-</form>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     <!-- Appointment End -->
-  
+
     <?php include 'footer.php'; ?>
 
     <!-- Back to Top -->
@@ -338,6 +382,17 @@ $user = $result->fetch_assoc();
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+        ...
+    <script src="js/main.js"></script>
+
+    <script>
+    if (window.location.hash === '#pill-appointment') {
+        var trigger = document.querySelector('[data-bs-target="#pill-appointment"]');
+        if (trigger) new bootstrap.Tab(trigger).show();
+    }
+    </script>
+</body>
+</html>
 </body>
 
 </html>

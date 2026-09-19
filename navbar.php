@@ -15,12 +15,11 @@
                     <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu rounded-0 rounded-bottom m-0">
                         <a href="feature.php" class="dropdown-item">Pelaporan anonim</a>
-                        <a href="team.php" class="dropdown-item active">List docter</a>
+                        <a href="team.php" class="dropdown-item active">Daftar Psikolog</a>
                         <a href="appointment.php" class="dropdown-item">Story Board</a>
                     </div>
                 </div>
                 <a href="contact.php" class="nav-item nav-link">profile</a>
             </div>
-            <a href="" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Appointment<i class="fa fa-arrow-right ms-3"></i></a>
-        </div>
+            <a href="index.php#pill-appointment" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Appointment<i class="fa fa-arrow-right ms-3"></i></a>
     </nav>

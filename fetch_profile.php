@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../db_connection.php';
+include 'db_connection.php';
 
 $user_id = $_SESSION['user_id']; // Assume user_id is stored in session after login
 

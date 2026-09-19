@@ -517,3 +517,10 @@
 .footer .copyright a:hover {
     color: var(--primary);
 }
+
+.tab-pane.fade {
+    transition: opacity 0.4s ease-in-out;
+}
+.tab-content {
+    min-height: 420px;
+}

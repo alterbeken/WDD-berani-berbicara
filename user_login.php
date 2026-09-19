@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($user['role'] == "admin") {
             header("Location: admin_view_users.php");
         } elseif ($user['role'] == "member") {
-            header("Location: login_session_user.php");
+            header("Location: index.php");
         }
         exit(); 
     } else {

@@ -75,7 +75,7 @@
                         <i class="fa fa-smile text-primary fs-4"></i>
                     </div>
                     <h4 class="mb-3">Apa itu Bullying (Perundungan)? Apa saja bentuk bullying?</h4>
-                    <iframe width="100%" height="200" src="https://youtube.com/embed/am3sGO12f6Q?si=AIE1OBvmnf6M-aNR" title="Relaxing Music" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/am3sGO12f6Q?si=AIE1OBvmnf6M-aNR" title="Relaxing Music" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">

@@ -98,34 +98,34 @@
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                 <p class="d-inline-block border rounded-pill py-1 px-4">Testimonial</p>
-                <h1>What Say Our Patients!</h1>
-            </div>
-            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-                <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="img/testimonial-1.jpg" style="width: 100px; height: 100px;">
-                    <div class="testimonial-text rounded text-center p-4">
-                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                        <h5 class="mb-1">Patient Name</h5>
-                        <span class="fst-italic">Profession</span>
+                <h1>Apa Kata Mereka yang Terbantu!</h1>
+                    </div>
+                            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="testimonial-item text-center">
+                        <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="img/testimonial-1.jpg" style="width: 100px; height: 100px;">
+                        <div class="testimonial-text rounded text-center p-4">
+                            <p>Awalnya aku ragu buat cerita ke siapapun soal apa yang aku alami di sekolah. Tapi lewat Berani Berbicara, aku dibantu ngomong sama psikolog dan sekarang jauh lebih tenang menghadapi hari-hari.</p>
+                            <h5 class="mb-1">Rangga P.</h5>
+                            <span class="fst-italic">Siswa SMA</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-item text-center">
+                        <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="img/testimonial-2.jpg" style="width: 100px; height: 100px;">
+                        <div class="testimonial-text rounded text-center p-4">
+                            <p>Sebagai orang tua, aku sempat gak tau harus mulai dari mana pas anakku cerita soal bullying di sekolahnya. Fitur konsultasi di sini bener-bener bantu kami dapet arahan yang tepat.</p>
+                            <h5 class="mb-1">Sarah W.</h5>
+                            <span class="fst-italic">Orang Tua Siswa</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-item text-center">
+                        <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="img/testimonial-3.jpg" style="width: 100px; height: 100px;">
+                        <div class="testimonial-text rounded text-center p-4">
+                            <p>Fitur pelaporannya bikin aku ngerasa lebih aman buat speak up, karena identitasku dijaga. Prosesnya juga cepat, ada respons dari pihak yang bisa bantu.</p>
+                            <h5 class="mb-1">Devan A.</h5>
+                            <span class="fst-italic">Mahasiswa</span>
+                        </div>
                     </div>
                 </div>
-                <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="img/testimonial-2.jpg" style="width: 100px; height: 100px;">
-                    <div class="testimonial-text rounded text-center p-4">
-                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                        <h5 class="mb-1">Patient Name</h5>
-                        <span class="fst-italic">Profession</span>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="img/testimonial-3.jpg" style="width: 100px; height: 100px;">
-                    <div class="testimonial-text rounded text-center p-4">
-                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                        <h5 class="mb-1">Patient Name</h5>
-                        <span class="fst-italic">Profession</span>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
     <!-- Testimonial End -->
