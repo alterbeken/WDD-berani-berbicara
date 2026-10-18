@@ -1,6 +1,7 @@
 <?php
 session_start();
 include('db_connection.php');
+include('psychologists.php');
 
 
 if (!isset($_SESSION['user_id'])) {
@@ -15,6 +16,7 @@ $stmt->bind_param("i", $user_id);
 $stmt->execute();
 $result = $stmt->get_result();
 $user = $result->fetch_assoc();
+$total_users = (int)$conn->query("SELECT COUNT(*) AS c FROM users")->fetch_assoc()['c'];
 ?>
 
 <!DOCTYPE html>
@@ -77,15 +79,15 @@ $user = $result->fetch_assoc();
                 <div class="row g-4">
                     <div class="col-sm-4">
                         <div class="border-start border-light ps-4">
-                            <h2 class="text-white mb-1" data-toggle="counter-up">125</h2>
+                            <h2 class="text-white mb-1" data-toggle="counter-up"><?php echo count($psychologists); ?></h2>
                             <p class="text-light mb-0">Psikolog</p>
                         </div>
                     </div>
                     
                     <div class="col-sm-4">
                         <div class="border-start border-light ps-4">
-                            <h2 class="text-white mb-1" data-toggle="counter-up">12345</h2>
-                            <p class="text-light mb-0">Komunitas</p>
+                            <h2 class="text-white mb-1" data-toggle="counter-up"><?php echo $total_users; ?></h2>
+                            <p class="text-light mb-0">Pengguna Terdaftar</p>
                         </div>
                     </div>
                 </div>
@@ -293,10 +295,9 @@ $user = $result->fetch_assoc();
                                 <div class="col-12 col-sm-6">
                                     <select name="doctor_choice" class="form-control border-0" style="height: 55px;" required>
                                         <option value="">Pilih Psikolog</option>
-                                        <option value="Alter">Alter</option>
-                                        <option value="Reef">Reef</option>
-                                        <option value="Abner">Abner</option>
-                                        <option value="Steve">Steve</option>
+                                        <?php foreach ($psychologists as $p): ?>
+                                        <option value="<?php echo htmlspecialchars($p['name']); ?>"><?php echo htmlspecialchars($p['name']); ?></option>
+                                        <?php endforeach; ?>
                                     </select>
                                 </div>
                                 <div class="col-12 col-sm-6">

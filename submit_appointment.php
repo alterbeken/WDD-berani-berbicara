@@ -20,7 +20,7 @@ $stmt = $conn->prepare($query);
 $stmt->bind_param("issssss", $user_id, $name, $email, $mobile, $doctor_choice, $appointment_date, $appointment_time);
 
 if ($stmt->execute()) {
-    header("refresh:2;url=login_session_user.php");
+    header("refresh:2;url=index.php");
     echo "<div style='background:#d4edda;color:#155724;padding:20px;margin:20px;border-radius:8px;font-family:sans-serif;text-align:center;'>Booking konsultasi berhasil! Mengalihkan...</div>";
 } else {
     echo "<div style='background:#f8d7da;color:#721c24;padding:20px;margin:20px;border-radius:8px;font-family:sans-serif;text-align:center;'>Error: " . $stmt->error . "</div>";

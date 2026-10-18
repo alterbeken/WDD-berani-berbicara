@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("ssss", $name, $email, $mobile, $problem);
 
         if ($stmt->execute()) {
-    header("refresh:2;url=appointment.php");
+    header("refresh:2;url=story.php");
             echo "<div style='background:#d4edda;color:#155724;padding:20px;margin:20px;border-radius:8px;font-family:sans-serif;text-align:center;'>Cerita kamu berhasil dikirim! Mengalihkan...</div>";
     } else {
             echo "<div style='background:#f8d7da;color:#721c24;padding:20px;margin:20px;border-radius:8px;font-family:sans-serif;text-align:center;'>Error: " . $stmt->error . "</div>";
