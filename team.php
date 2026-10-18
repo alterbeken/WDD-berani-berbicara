@@ -31,6 +31,13 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+        /* Kartu psikolog: foto seragam dan teks mengikuti isi (override tinggi tetap dari template) */
+        .team-item img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+        .team-item .team-text { height: auto; min-height: 120px; }
+        .team-item:hover img { top: 0; }
+        .team-item:hover .team-text { margin-top: 0; height: auto; }
+    </style>
 </head>
 
 <body>
