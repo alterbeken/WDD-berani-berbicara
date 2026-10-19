@@ -1,4 +1,4 @@
-<?php if (session_status() === PHP_SESSION_NONE) { session_start(); } ?>
+<?php require 'auth_guard.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +10,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/logo.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -54,8 +54,8 @@
             <h1 class="display-3 text-white mb-3 animated slideInDown">Article</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb text-uppercase mb-0">
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Artikel</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="index.php">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="about.php">Artikel</a></li>
                 </ol>
             </nav>
         </div>

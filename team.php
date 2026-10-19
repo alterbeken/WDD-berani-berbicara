@@ -1,4 +1,4 @@
-<?php if (session_status() === PHP_SESSION_NONE) { session_start(); } ?>
+<?php require 'auth_guard.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +10,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/logo.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

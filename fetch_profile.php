@@ -2,7 +2,12 @@
 session_start();
 include 'db_connection.php';
 
-$user_id = $_SESSION['user_id']; // Assume user_id is stored in session after login
+if (!isset($_SESSION['user_id'])) {
+    http_response_code(401);
+    echo json_encode(["error" => "Belum login"]);
+    exit();
+}
+$user_id = $_SESSION['user_id'];
 
 $sql = "SELECT email, first_name, last_name, user_level FROM users WHERE user_id = ?";
 $stmt = $conn->prepare($sql);

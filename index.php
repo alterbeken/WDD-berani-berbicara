@@ -30,7 +30,7 @@ $total_users = (int)$conn->query("SELECT COUNT(*) AS c FROM users")->fetch_assoc
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="" rel="icon">
+    <link href="img/logo.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

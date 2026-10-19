@@ -1,4 +1,4 @@
-<?php if (session_status() === PHP_SESSION_NONE) { session_start(); } ?>
+<?php require 'auth_guard.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +10,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/logo.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,8 +55,7 @@
             <h1 class="display-3 text-white mb-3 animated slideInDown">Tell Your Story  </h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb text-uppercase mb-0">
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="index.php">Home</a></li>
                     <li class="breadcrumb-item text-primary active" aria-current="page">Tell Your Story</li>
                 </ol>
             </nav>
@@ -74,20 +73,18 @@
                 <div class="bg-light rounded h-100 d-flex align-items-center p-5">
                     <form id="storyForm">
                         <div class="row g-3">
-                            <div class="col-12 col-sm-6">
-                                <input type="text" name="name" class="form-control border-0" placeholder="Your Name" style="height: 55px;" required>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <input type="email" name="email" class="form-control border-0" placeholder="Your Email" style="height: 55px;">
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <input type="text" name="mobile" class="form-control border-0" placeholder="Your Mobile" style="height: 55px;">
+                            <div class="col-12">
+                                <textarea name="problem" class="form-control border-0" rows="6" maxlength="1000" placeholder="Ceritakan pengalamanmu (maksimal 1000 karakter)" required></textarea>
                             </div>
                             <div class="col-12">
-                                <textarea name="problem" class="form-control border-0" rows="5" placeholder="Describe your problem" required></textarea>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="anonymous" value="1" id="anonymous">
+                                    <label class="form-check-label" for="anonymous">Tampilkan sebagai Anonim</label>
+                                </div>
+                                <small class="text-muted d-block mt-1" id="authorHint" data-named="Ceritamu akan tampil dengan nama: <?php echo htmlspecialchars(story_author_name()); ?>" data-anon="Ceritamu akan tampil sebagai Anonim. Namamu tidak ditampilkan.">Ceritamu akan tampil dengan nama: <?php echo htmlspecialchars(story_author_name()); ?></small>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Submit Your Story</button>
+                                <button class="btn btn-primary w-100 py-3" type="submit">Kirim Cerita</button>
                             </div>
                         </div>
                     </form>
@@ -108,6 +105,12 @@
 </div>
 
 <script>
+    // Petunjuk nama penulis mengikuti centang Anonim
+    $('#anonymous').on('change', function () {
+        var hint = $('#authorHint');
+        hint.text(this.checked ? hint.data('anon') : hint.data('named'));
+    });
+
     // Submit story form
     $('#storyForm').on('submit', function (e) {
         e.preventDefault();
@@ -115,8 +118,16 @@
             alert(response);
             loadStories();
             $('#storyForm')[0].reset();
+            $('#anonymous').trigger('change');
+        }).fail(function (xhr) {
+            alert(xhr.responseText || 'Gagal mengirim cerita. Silakan coba lagi.');
         });
     });
+
+    // Escape teks dari pengguna sebelum ditampilkan sebagai HTML
+    function esc(text) {
+        return $('<div>').text(text == null ? '' : String(text)).html();
+    }
 
     // Load stories
     function loadStories() {
@@ -125,9 +136,9 @@
             data.forEach(story => {
                 html += `
                     <div class="border rounded p-3 mb-3">
-                        <h5>${story.name}</h5>
-                        <small class="text-muted">${story.created_at}</small>
-                        <p class="mt-2">${story.problem}</p>
+                        <h5>${esc(story.name)}</h5>
+                        <small class="text-muted">${esc(story.created_at)}</small>
+                        <p class="mt-2" style="white-space: pre-line;">${esc(story.problem)}</p>
                     </div>
                 `;
             });

@@ -7,23 +7,18 @@
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Serpong</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>0812434425344</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>beraniberbicara@gmail.com</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-linkedin-in"></i></a>
-                    </div>
                 </div>
+            </div>
+        </div>
 
         <div class="container">
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Berani Berbicara!</a>, All Right Reserved.
+                        &copy; <a class="border-bottom" href="index.php">Berani Berbicara!</a>. Dikembangkan oleh Alter, Reef, Abner, dan Steve, Universitas Multimedia Nusantara.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a class="border-bottom" href="https://htmlcodex.com">Mahasiswa Universitas Multimedia Nusantara</a>
+                        Template desain: <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
                     </div>
                 </div>
             </div>

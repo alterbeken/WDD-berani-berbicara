@@ -1,4 +1,4 @@
-<?php if (session_status() === PHP_SESSION_NONE) { session_start(); } ?>
+<?php require 'auth_guard.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -32,7 +32,7 @@
     <div class="container rounded bg-white mt-5 mb-5">
     <div class="row">
         <div class="col-md-3 border-right">
-            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span class="font-weight-bold">Edogaru</span><span class="text-black-50">edogaru@mail.com.my</span><span> </span></div>
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" height="150px" alt="Foto profil" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 150'%3E%3Crect width='150' height='150' fill='%23dbe6f7'/%3E%3Ccircle cx='75' cy='58' r='28' fill='%230047ab' opacity='.55'/%3E%3Cpath d='M20 150a55 55 0 0 1 110 0z' fill='%230047ab' opacity='.55'/%3E%3C/svg%3E"><span class="font-weight-bold mt-2" id="cardName"></span><span class="text-black-50" id="cardEmail"></span></div>
         </div>
         <div class="col-md-5 border-right">
     <div class="p-3 py-5">
@@ -50,6 +50,8 @@
         <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button" id="saveProfileBtn">Save Profile</button></div>
     </div>
 </div>
+    </div>
+</div>
 
 <script>
 fetch('fetch_profile.php')
@@ -59,6 +61,8 @@ fetch('fetch_profile.php')
             document.getElementById('first_name').value = data.first_name;
             document.getElementById('last_name').value = data.last_name;
             document.getElementById('email').value = data.email;
+            document.getElementById('cardName').textContent = data.first_name + ' ' + data.last_name;
+            document.getElementById('cardEmail').textContent = data.email;
         }
     });
 
@@ -73,8 +77,9 @@ document.getElementById('saveProfileBtn').addEventListener('click', function() {
             const msg = document.getElementById('profileMessage');
             if (data.success) {
                 msg.innerHTML = "<div class='alert alert-success'>Profil berhasil diperbarui!</div>";
+                document.getElementById('cardName').textContent = document.getElementById('first_name').value + ' ' + document.getElementById('last_name').value;
             } else {
-                msg.innerHTML = "<div class='alert alert-danger'>Gagal: " + data.error + "</div>";
+                msg.textContent = "Gagal: " + data.error; msg.className = "alert alert-danger";
             }
         });
 });

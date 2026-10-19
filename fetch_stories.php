@@ -1,7 +1,14 @@
 <?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    http_response_code(401);
+    echo json_encode([]);
+    exit();
+}
 include 'db_connection.php';
 
-$result = $conn->query("SELECT * FROM storyboard ORDER BY created_at DESC");
+// Hanya kolom yang memang ditampilkan. Email dan nomor telepon penulis TIDAK dikirim ke browser.
+$result = $conn->query("SELECT id, name, problem, created_at FROM storyboard ORDER BY created_at DESC");
 
 $stories = [];
 while ($row = $result->fetch_assoc()) {
@@ -10,5 +17,5 @@ while ($row = $result->fetch_assoc()) {
 
 $conn->close();
 
+header('Content-Type: application/json; charset=utf-8');
 echo json_encode($stories);
-?>
